@@ -1,7 +1,7 @@
 # site settings
 title: Harsh Jog
 subtitle: Personal Website
-email: harshjog9@gmail.com
+email:
 description: Engineer &bull; Hiker &bull; Artist &bull; Baker
 baseurl: ""
 url: "https://harshjog.github.io"
