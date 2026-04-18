@@ -1,0 +1,36 @@
+# site settings
+title: Harsh Jog
+subtitle: Personal Website
+email: harshjog9@gmail.com
+description: Engineer &bull; Hiker &bull; Artist &bull; Baker
+baseurl: ""
+url: "https://harshjog.github.io"
+author: Harsh Jog
+
+# homepage tiles
+tiles-source: pages
+tiles-count: 5
+
+# social settings
+socials:
+  GitHub: https://github.com/harshjog
+  LinkedIn: https://www.linkedin.com/in/harsh-jog/
+  Instagram: https://www.instagram.com/harshpjog/
+  Twitter:
+  Facebook:
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+  - "*.gemspec"
+  - LICENSE.md
+  - CONTRIBUTING.md
+  - README.md
+  - forty-jekyll-theme-master
+  - forty-jekyll-theme-master.zip
+  - Photos-3-001.zip
+  - to_do_list_v1.txt
