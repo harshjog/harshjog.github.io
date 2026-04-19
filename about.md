@@ -4,6 +4,7 @@ title: About
 description: A bit about me
 image:
 show_tile: true
+nav-menu: true
 weight: 1
 ---
 

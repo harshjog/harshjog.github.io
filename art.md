@@ -4,6 +4,7 @@ title: Art
 description: Photos and paintings
 image:
 show_tile: true
+nav-menu: true
 weight: 2
 ---
 

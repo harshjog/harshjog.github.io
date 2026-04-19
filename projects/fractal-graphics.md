@@ -4,7 +4,6 @@ title: Fractal Graphics
 description: Animated fractal GIF generator with GPU support
 image:
 show_tile: false
-nav-menu: true
 ---
 
 A fractal animation generator that creates mesmerising self-similar animated patterns and exports them as optimised GIF files. Features real-time visualisation, customisable complexity levels, and optional GPU acceleration via PyOpenCL.

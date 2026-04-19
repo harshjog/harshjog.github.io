@@ -4,6 +4,7 @@ title: Contact
 description: Get in touch
 image:
 show_tile: true
+nav-menu: true
 weight: 5
 ---
 

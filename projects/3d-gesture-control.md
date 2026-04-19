@@ -4,7 +4,6 @@ title: 3D Gesture Control
 description: Manipulate 3D objects in a live webcam feed via hand gestures
 image:
 show_tile: false
-nav-menu: true
 ---
 
 An interactive application that projects 3D objects — cubes and spheres — onto a live webcam feed and allows real-time manipulation through hand gestures. Users can move, scale, and rotate objects using pinch and pointing gestures, with correct depth rendering.

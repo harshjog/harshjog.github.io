@@ -4,6 +4,7 @@ title: Coding Projects
 description: A selection of personal projects
 image:
 show_tile: true
+nav-menu: true
 weight: 3
 ---
 

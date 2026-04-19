@@ -4,7 +4,6 @@ title: Paint App
 description: Real-time handwriting recognition with a CNN
 image:
 show_tile: false
-nav-menu: true
 ---
 
 A paint application with real-time handwriting recognition trained on the EMNIST database. Users can draw characters on a canvas that are automatically classified by a convolutional neural network supporting 47 character classes — digits and letters.

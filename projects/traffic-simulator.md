@@ -4,7 +4,6 @@ title: Traffic Simulator
 description: Cellular automata model of multi-lane traffic flow
 image:
 show_tile: false
-nav-menu: true
 ---
 
 A traffic flow simulator based on the Nagel-Schreckenberg cellular automata model. It models multi-lane vehicle dynamics and lane-changing behaviour, and analyses traffic organisation using entropy-based metrics with visualisations of vehicle movement.
