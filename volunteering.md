@@ -8,7 +8,7 @@ nav-menu: true
 weight: 5
 ---
 
-Harsh currently volunteers at [Jnana Prabodhini Foundation (JPF)](https://www.instagram.com/supportjpf), volunteering in their data analytics wing.
+Harsh currently spends some of his free time at [Jnana Prabodhini Foundation (JPF)](https://www.instagram.com/supportjpf), volunteering in their data analytics wing.
 
 Previously he has volunteered at:
 
