@@ -8,4 +8,4 @@ author: null
 show_tile: false
 ---
 
-Harsh Jog is an engineer, a hiker, an amateur artist, and an amateur baker. This website will serve as a place for random projects of his.
+Harshvardhan (Harsh) Jog is an engineer, a hiker, an amateur artist, and an amateur baker, among other things. This website will serve as a place for random projects of his.
