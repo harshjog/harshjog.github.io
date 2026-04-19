@@ -5,7 +5,7 @@ description: Giving back to the community
 image:
 show_tile: true
 nav-menu: true
-weight: 6
+weight: 5
 ---
 
 Harsh currently volunteers at [Jnana Prabodhini Foundation (JPF)](https://www.instagram.com/supportjpf), volunteering in their data analytics wing.
