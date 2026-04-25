@@ -47,7 +47,9 @@ A collection of photos and paintings from over the years. For best experience, e
 }
 .art-card img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: contain;
+  background: #242a2e;
   display: block;
   transition: opacity 0.2s;
 }
