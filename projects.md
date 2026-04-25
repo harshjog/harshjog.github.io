@@ -15,23 +15,6 @@ A selection of personal software projects spanning machine learning, simulation,
 
   <section>
     <a class="image">
-      <img src="{{ site.baseurl }}/assets/images/paint_app.png" alt="PaintApp" data-position="center center" />
-    </a>
-    <div class="content">
-      <div class="inner">
-        <header class="major">
-          <h3>Paint App</h3>
-        </header>
-        <p>A paint application with real-time handwriting recognition trained on the EMNIST database. Draw characters on a canvas that are automatically classified by a convolutional neural network supporting 47 character classes.</p>
-        <ul class="actions">
-          <li><a href="{{ site.baseurl }}/projects/paint-app" class="button">Learn more</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <a class="image">
       <img src="{{ site.baseurl }}/assets/images/traffic_simulator.png" alt="TrafficSimulator" data-position="center center" />
     </a>
     <div class="content">
@@ -59,6 +42,23 @@ A selection of personal software projects spanning machine learning, simulation,
         <p>A fractal animation generator that creates self-similar animated patterns and exports them as optimised GIF files, with optional GPU acceleration via PyOpenCL.</p>
         <ul class="actions">
           <li><a href="{{ site.baseurl }}/projects/fractal-graphics" class="button">Learn more</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <a class="image">
+      <img src="{{ site.baseurl }}/assets/images/paint_app.png" alt="PaintApp" data-position="center center" />
+    </a>
+    <div class="content">
+      <div class="inner">
+        <header class="major">
+          <h3>Paint App</h3>
+        </header>
+        <p>A paint application with real-time handwriting recognition trained on the EMNIST database. Draw characters on a canvas that are automatically classified by a convolutional neural network supporting 47 character classes.</p>
+        <ul class="actions">
+          <li><a href="{{ site.baseurl }}/projects/paint-app" class="button">Learn more</a></li>
         </ul>
       </div>
     </div>

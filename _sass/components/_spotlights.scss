@@ -30,6 +30,8 @@
 					border-radius: 0;
 					display: block;
 					width: 100%;
+					-webkit-mask-image: linear-gradient(to right, black 55%, transparent 100%);
+					mask-image: linear-gradient(to right, black 55%, transparent 100%);
 				}
 
 				&:before {
@@ -63,6 +65,11 @@
 			&:nth-child(2n) {
 				@include vendor('flex-direction', 'row-reverse');
 				background-color: desaturate(lighten(_palette(bg-alt), 4), 2);
+
+				> .image img {
+					-webkit-mask-image: linear-gradient(to left, black 55%, transparent 100%);
+					mask-image: linear-gradient(to left, black 55%, transparent 100%);
+				}
 
 				> .content {
 					@include vendor('align-items', 'flex-end');
@@ -100,6 +107,11 @@
 
 				> .image {
 					width: 100%;
+
+					img {
+						-webkit-mask-image: none;
+						mask-image: none;
+					}
 				}
 
 				> .content {
