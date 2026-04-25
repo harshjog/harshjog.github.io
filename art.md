@@ -10,50 +10,332 @@ weight: 2
 
 A collection of photos and paintings from over the years.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem;">
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/IMG_20230409_175130_014.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/IMG_20230409_175130_014.jpg" alt="Art 1" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
+<style>
+#art-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem;
+}
+#art-toggle button {
+  padding: 0.45rem 1.4rem;
+  border: 2px solid #9bf1ff;
+  background: transparent;
+  color: #9bf1ff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+#art-toggle button.active {
+  background: #9bf1ff;
+  color: #1b1f22;
+}
+
+/* --- Gallery --- */
+#art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.art-card {
+  background: #242a2e;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.art-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s;
+}
+.art-card:hover img { opacity: 0.8; }
+.art-card-info {
+  padding: 0.55rem 0.75rem 0.75rem;
+}
+.art-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.2rem;
+}
+.art-card-caption {
+  font-size: 0.78rem;
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+/* --- Carousel --- */
+#art-carousel { text-align: center; }
+#carousel-frame {
+  max-width: 680px;
+  margin: 0 auto;
+}
+#carousel-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#carousel-img.fading { opacity: 0; }
+#carousel-info { margin-top: 0.9rem; }
+#carousel-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.25rem;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#carousel-caption {
+  font-size: 0.82rem;
+  color: #999;
+  font-style: italic;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#carousel-title.fading,
+#carousel-caption.fading { opacity: 0; }
+#carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.carousel-btn {
+  background: transparent;
+  border: 2px solid #9bf1ff;
+  color: #9bf1ff;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+.carousel-btn:hover {
+  background: #9bf1ff;
+  color: #1b1f22;
+}
+#carousel-counter { font-size: 0.82rem; color: #888; min-width: 50px; }
+
+/* --- Lightbox --- */
+#art-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+#lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+  opacity: 0.65;
+  transition: opacity 0.15s;
+}
+#lightbox-close:hover { opacity: 1; }
+#lightbox-img {
+  max-width: 88vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+#lightbox-info { margin-top: 0.9rem; text-align: center; }
+#lightbox-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+#lightbox-caption {
+  font-size: 0.82rem;
+  color: #aaa;
+  font-style: italic;
+  margin: 0;
+}
+</style>
+
+<div id="art-toggle">
+  <button id="btn-gallery" class="active">Gallery</button>
+  <button id="btn-carousel">Carousel</button>
+</div>
+
+<div id="art-gallery"></div>
+
+<div id="art-carousel" style="display:none;">
+  <div id="carousel-frame">
+    <img id="carousel-img" src="" alt="" />
   </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/IMG_20240705_125344_011.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/IMG_20240705_125344_011.jpg" alt="Art 2" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
+  <div id="carousel-info">
+    <p id="carousel-title"></p>
+    <p id="carousel-caption"></p>
   </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20230606_004441195.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20230606_004441195.jpg" alt="Art 3" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20250323_202326353.MP.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20250323_202326353.MP.jpg" alt="Art 4" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20250502_023949908~2.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20250502_023949908~2.jpg" alt="Art 5" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20250511_015550017~2.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20250511_015550017~2.jpg" alt="Art 6" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg" alt="Art 7" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg" alt="Art 8" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
-  </div>
-  <div style="overflow: hidden; border-radius: 4px;">
-    <a href="{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg" target="_blank">
-      <img src="{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg" alt="Art 9" style="width:100%; height:220px; object-fit:cover; display:block;" />
-    </a>
+  <div id="carousel-controls">
+    <button class="carousel-btn" id="carousel-prev">&#8592;</button>
+    <span id="carousel-counter"></span>
+    <button class="carousel-btn" id="carousel-next">&#8594;</button>
   </div>
 </div>
+
+<div id="art-lightbox" style="display:none;">
+  <button id="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="" />
+  <div id="lightbox-info">
+    <p id="lightbox-title"></p>
+    <p id="lightbox-caption"></p>
+  </div>
+</div>
+
+<script>
+const artPieces = [
+  { src: "{{ site.baseurl }}/assets/images/IMG_20230409_175130_014.jpg",   title: "Art 1", caption: "Caption 1" },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20240705_125344_011.jpg",   title: "Art 2", caption: "Caption 2" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20230606_004441195.jpg",    title: "Art 3", caption: "Caption 3" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250323_202326353.MP.jpg", title: "Art 4", caption: "Caption 4" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250502_023949908~2.jpg",  title: "Art 5", caption: "Caption 5" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250511_015550017~2.jpg",  title: "Art 6", caption: "Caption 6" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg",    title: "Art 7", caption: "Caption 7" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg",    title: "Art 8", caption: "Caption 8" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg",    title: "Art 9", caption: "Caption 9" },
+];
+
+/* ---- Gallery ---- */
+const galleryEl = document.getElementById('art-gallery');
+artPieces.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'art-card';
+  card.innerHTML =
+    '<img src="' + p.src + '" alt="' + p.title + '" loading="lazy" />' +
+    '<div class="art-card-info">' +
+      '<p class="art-card-title">' + p.title + '</p>' +
+      '<p class="art-card-caption">' + p.caption + '</p>' +
+    '</div>';
+  card.addEventListener('click', () => openLightbox(i));
+  galleryEl.appendChild(card);
+});
+
+/* ---- Mode toggle ---- */
+document.getElementById('btn-gallery').addEventListener('click', () => setMode('gallery'));
+document.getElementById('btn-carousel').addEventListener('click', () => setMode('carousel'));
+
+function setMode(mode) {
+  const isGallery = mode === 'gallery';
+  galleryEl.style.display = isGallery ? 'grid' : 'none';
+  document.getElementById('art-carousel').style.display = isGallery ? 'none' : 'block';
+  document.getElementById('btn-gallery').classList.toggle('active', isGallery);
+  document.getElementById('btn-carousel').classList.toggle('active', !isGallery);
+  isGallery ? stopCarousel() : startCarousel();
+}
+
+/* ---- Lightbox ---- */
+function openLightbox(i) {
+  const p = artPieces[i];
+  document.getElementById('lightbox-img').src = p.src;
+  document.getElementById('lightbox-img').alt = p.title;
+  document.getElementById('lightbox-title').textContent = p.title;
+  document.getElementById('lightbox-caption').textContent = p.caption;
+  document.getElementById('art-lightbox').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('art-lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('art-lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+/* ---- Carousel ---- */
+let carouselIndex = 0;
+let carouselTimer = null;
+const FADE_MS = 500;
+const INTERVAL_MS = 5000;
+
+function showSlide(i, animate) {
+  const p = artPieces[i];
+  const img    = document.getElementById('carousel-img');
+  const title  = document.getElementById('carousel-title');
+  const caption = document.getElementById('carousel-caption');
+
+  function swap() {
+    img.src = p.src;
+    img.alt = p.title;
+    title.textContent = p.title;
+    caption.textContent = p.caption;
+    document.getElementById('carousel-counter').textContent = (i + 1) + ' / ' + artPieces.length;
+  }
+
+  if (animate) {
+    img.classList.add('fading');
+    title.classList.add('fading');
+    caption.classList.add('fading');
+    setTimeout(function() {
+      swap();
+      img.classList.remove('fading');
+      title.classList.remove('fading');
+      caption.classList.remove('fading');
+    }, FADE_MS);
+  } else {
+    swap();
+  }
+}
+
+function startCarousel() {
+  showSlide(carouselIndex, false);
+  carouselTimer = setInterval(function() {
+    carouselIndex = (carouselIndex + 1) % artPieces.length;
+    showSlide(carouselIndex, true);
+  }, INTERVAL_MS);
+}
+
+function stopCarousel() {
+  clearInterval(carouselTimer);
+  carouselTimer = null;
+}
+
+function step(dir) {
+  carouselIndex = (carouselIndex + dir + artPieces.length) % artPieces.length;
+  showSlide(carouselIndex, true);
+  stopCarousel();
+  carouselTimer = setInterval(function() {
+    carouselIndex = (carouselIndex + 1) % artPieces.length;
+    showSlide(carouselIndex, true);
+  }, INTERVAL_MS);
+}
+
+document.getElementById('carousel-prev').addEventListener('click', () => step(-1));
+document.getElementById('carousel-next').addEventListener('click', () => step(1));
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('art-carousel').style.display === 'none') return;
+  if (e.key === 'ArrowLeft')  step(-1);
+  if (e.key === 'ArrowRight') step(1);
+});
+</script>
