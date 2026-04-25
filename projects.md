@@ -49,7 +49,7 @@ A selection of personal software projects spanning machine learning, simulation,
 
   <section>
     <a class="image">
-      <img src="{{ site.baseurl }}/assets/images/fractal_animation_banner" alt="Fractal_graphics" data-position="center center" />
+      <img src="{{ site.baseurl }}/assets/images/fractal_animation_banner.jpg" alt="Fractal_graphics" data-position="center center" />
     </a>
     <div class="content">
       <div class="inner">
