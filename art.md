@@ -3,6 +3,7 @@ layout: post
 title: Art
 description: Photos and paintings
 image: assets/images/PXL_20250521_225906006.jpg
+show_header_image: false
 show_tile: true
 nav-menu: true
 weight: 2
