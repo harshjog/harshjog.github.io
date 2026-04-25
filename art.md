@@ -220,6 +220,22 @@ const artPieces = [
   { src: "{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg",    title: "Philly Spring", caption: "Acrylic on Canvas, 8in. x 10in." },
   { src: "{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg",    title: "When life gives you lemons, paint them", caption: "Acrylic on Canvas, 8in. x 10in." },
   { src: "{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg",    title: "Fall at the Japanese Garden", caption: "Acrylic on Canvas, 8in. x 10in." },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20190902_193525.jpg",       title: "Art 10",  caption: "Caption 10" },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20200416_190539.jpg",       title: "Art 11",  caption: "Caption 11" },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20231023_173825_482.jpg",   title: "Art 12",  caption: "Caption 12" },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20240324_090912_101.jpg",   title: "Art 13",  caption: "Caption 13" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20201115_191213802.jpg",    title: "Art 14",  caption: "Caption 14" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20210110_194939121.jpg",    title: "Art 15",  caption: "Caption 15" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20210515_160411983.jpg",    title: "Art 16",  caption: "Caption 16" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20210806_231817076.jpg",    title: "Art 17",  caption: "Caption 17" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20210923_215410086.jpg",    title: "Art 18",  caption: "Caption 18" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20220509_071601463~2.jpg",  title: "Art 19",  caption: "Caption 19" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20220527_111921669~2.jpg",  title: "Art 20",  caption: "Caption 20" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20220629_213149584.jpg",    title: "Art 21",  caption: "Caption 21" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20220828_012044388.jpg",    title: "Art 22",  caption: "Caption 22" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20221020_005658711.jpg",    title: "Art 23",  caption: "Caption 23" },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20260119_204650477.jpg",    title: "Art 24",  caption: "Caption 24" },
+  { src: "{{ site.baseurl }}/assets/images/PicsArt_12-14-08.39.43.jpg",   title: "Art 25",  caption: "Caption 25" },
 ];
 
 /* ---- Gallery ---- */
