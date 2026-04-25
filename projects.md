@@ -2,7 +2,8 @@
 layout: post
 title: Coding Projects
 description: A selection of personal projects
-image:
+image: /assets/images/fractal_animation_banner.jpg
+show_header_image: false
 show_tile: true
 nav-menu: true
 weight: 3
