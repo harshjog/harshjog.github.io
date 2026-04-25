@@ -14,6 +14,9 @@ A selection of personal software projects spanning machine learning, simulation,
 <section class="spotlights">
 
   <section>
+    <a class="image">
+      <img src="{{ site.baseurl }}/assets/images/paint_app.png" alt="PaintApp" data-position="center center" />
+    </a>
     <div class="content">
       <div class="inner">
         <header class="major">
@@ -28,6 +31,9 @@ A selection of personal software projects spanning machine learning, simulation,
   </section>
 
   <section>
+    <a class="image">
+      <img src="{{ site.baseurl }}/assets/images/traffic_simulator.png" alt="TrafficSimulator" data-position="center center" />
+    </a>
     <div class="content">
       <div class="inner">
         <header class="major">
@@ -42,6 +48,9 @@ A selection of personal software projects spanning machine learning, simulation,
   </section>
 
   <section>
+    <a class="image">
+      <img src="{{ site.baseurl }}/assets/images/fractal_animation_banner" alt="Fractal_graphics" data-position="center center" />
+    </a>
     <div class="content">
       <div class="inner">
         <header class="major">
