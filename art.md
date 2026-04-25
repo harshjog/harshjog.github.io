@@ -211,15 +211,15 @@ A collection of photos and paintings from over the years. For best experience, e
 
 <script>
 const artPieces = [
-  { src: "{{ site.baseurl }}/assets/images/IMG_20230409_175130_014.jpg",   title: "Art 1", caption: "Caption 1" },
-  { src: "{{ site.baseurl }}/assets/images/IMG_20240705_125344_011.jpg",   title: "Art 2", caption: "Caption 2" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20230606_004441195.jpg",    title: "Art 3", caption: "Caption 3" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20250323_202326353.MP.jpg", title: "Art 4", caption: "Caption 4" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20250502_023949908~2.jpg",  title: "Art 5", caption: "Caption 5" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20250511_015550017~2.jpg",  title: "Art 6", caption: "Caption 6" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg",    title: "Art 7", caption: "Caption 7" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg",    title: "Art 8", caption: "Caption 8" },
-  { src: "{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg",    title: "Art 9", caption: "Caption 9" },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20230409_175130_014.jpg",   title: "Sunset at Bass Harbor", caption: "Acrylic on Canvas, 3in x 3in." },
+  { src: "{{ site.baseurl }}/assets/images/IMG_20240705_125344_011.jpg",   title: "A classic childhood subject, revisited", caption: "Acrylic on Canvas, 3in x 3in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20230606_004441195.jpg",    title: "Sophie, lounging", caption: "Acrylic on Canvas, 9in. x 9 in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250323_202326353.MP.jpg", title: "Sunset at Bass Harbor", caption: "Acrylic on Canvas, 9in. x 9in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250502_023949908~2.jpg",  title: "Four Seasons", caption: "Mixed media on Canvas, 8in. x 10in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250511_015550017~2.jpg",  title: "A quiet sunset", caption: "Acrylic on Canvas, 8in. x 10in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_225906006.jpg",    title: "Philly Spring", caption: "Acrylic on Canvas, 8in. x 10in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20250521_230156498.jpg",    title: "When life gives you lemons, paint them", caption: "Acrylic on Canvas, 8in. x 10in." },
+  { src: "{{ site.baseurl }}/assets/images/PXL_20251130_184623018.jpg",    title: "Fall at the Japanese Garden", caption: "Acrylic on Canvas, 8in. x 10in." },
 ];
 
 /* ---- Gallery ---- */
