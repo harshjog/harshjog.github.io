@@ -2,7 +2,7 @@
 layout: post
 title: Art
 description: Photos and paintings
-image:
+image: assets/images/PXL_20250521_225906006.jpg
 show_tile: true
 nav-menu: true
 weight: 2
