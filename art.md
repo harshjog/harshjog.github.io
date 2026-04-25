@@ -8,7 +8,7 @@ nav-menu: true
 weight: 2
 ---
 
-A collection of photos and paintings from over the years.
+A collection of photos and paintings from over the years. For best experience, either open images one-by-one in Gallery mode, or use the Carousel mode. :)
 
 <style>
 #art-toggle {
