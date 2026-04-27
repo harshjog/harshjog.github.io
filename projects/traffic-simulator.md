@@ -18,6 +18,24 @@ The simulator implements the classic NaSch model and extends it to multiple lane
 - **NumPy** — vectorised cellular automata updates
 - **Matplotlib** — traffic flow visualisations
 
+## Demo
+
+<div style="text-align: center; margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+    <img src="{{ site.baseurl }}/assets/videos/traffic_simulation.gif" alt="Traffic simulation ordered" style="max-width: 48%; border-radius: 4px;" />
+    <img src="{{ site.baseurl }}/assets/images/traffic_simulator_ordering.png" alt="Ordered lateral distribution" style="max-width: 48%; border-radius: 4px;" />
+  </div>
+  <p style="font-size: 0.85rem; color: #999; font-style: italic; margin-top: 0.5rem;">A randomized simulation showing ordered behavior (see lateral distribution on the right)</p>
+</div>
+
+<div style="text-align: center; margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+    <img src="{{ site.baseurl }}/assets/videos/traffic_simulation_2.gif" alt="Traffic simulation disordered" style="max-width: 48%; border-radius: 4px;" />
+    <img src="{{ site.baseurl }}/assets/images/traffic_simulator_disordered.png" alt="Disordered lateral distribution" style="max-width: 48%; border-radius: 4px;" />
+  </div>
+  <p style="font-size: 0.85rem; color: #999; font-style: italic; margin-top: 0.5rem;">Another randomized simulation, this time with higher level of disorder (see lateral distribution on the right)</p>
+</div>
+
 ## Links
 
 - [GitHub Repository](https://github.com/harshjog/traffic_simulator)
