@@ -25,7 +25,7 @@ Hand landmarks are detected each frame using MediaPipe. Gesture state (pinch dis
   <video controls style="max-width: 100%; border-radius: 4px;">
     <source src="{{ site.baseurl }}/assets/videos/3d_gesture.mp4" type="video/mp4" />
   </video>
-  <p style="font-size: 0.85rem; color: #999; font-style: italic; margin-top: 0.5rem;">An example of how the gesture control works in real time</p>
+  <p style="font-size: 1.3rem; color: #fff; font-style: italic; margin-top: 0.5rem;">An example of how the gesture control works in real time</p>
 </div>
 
 ## Links

@@ -25,7 +25,7 @@ The generator iterates over a configurable parameter space to produce animated f
     <img src="{{ site.baseurl }}/assets/videos/fractal_animation_optimized5_v4.gif" alt="Fractal variation 1" style="max-width: 48%; border-radius: 4px;" />
     <img src="{{ site.baseurl }}/assets/videos/fractal_animation_optimized5_v3.gif" alt="Fractal variation 2" style="max-width: 48%; border-radius: 4px;" />
   </div>
-  <p style="font-size: 0.85rem; color: #999; font-style: italic; margin-top: 0.5rem;">Two variations with different fractal patterns and color schemes generated using this code</p>
+  <p style="font-size: 1.3rem; color: #fff; font-style: italic; margin-top: 0.5rem;">Two variations with different fractal patterns and color schemes generated using this code</p>
 </div>
 
 ## Links
