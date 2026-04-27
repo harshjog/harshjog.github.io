@@ -2,7 +2,7 @@
 layout: post
 title: 3D Gesture Control
 description: Manipulate 3D objects in a live webcam feed via hand gestures
-image:
+image: 
 show_tile: false
 ---
 
@@ -18,6 +18,15 @@ Hand landmarks are detected each frame using MediaPipe. Gesture state (pinch dis
 - **MediaPipe** — real-time hand landmark detection
 - **OpenCV** — webcam capture and frame compositing
 - **Open3D** — 3D object modelling and rendering
+
+## Demo
+
+<div style="text-align: center; margin: 1.5rem 0;">
+  <video controls style="max-width: 100%; border-radius: 4px;">
+    <source src="{{ site.baseurl }}/assets/videos/3d_gesture.mp4" type="video/mp4" />
+  </video>
+  <p style="font-size: 0.85rem; color: #999; font-style: italic; margin-top: 0.5rem;">An example of how the gesture control works in real time</p>
+</div>
 
 ## Links
 
